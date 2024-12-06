@@ -3,6 +3,7 @@
   <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
@@ -122,6 +123,7 @@
       src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
   <body>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
@@ -130,6 +132,19 @@
     <script>
         
     </script>
+    <style>
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<link rel="stylesheet" href="/plotting/refreeze/js/highlight/styles/gruvbox-light.css">
+<script src="/plotting/refreeze/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
     <textarea id="source">
 name: inverse
 layout: true
@@ -142,6 +157,7 @@ class: center, middle, inverse
 Computational Python
 
 ---
+layout: false
 
 layout: false
 
@@ -172,7 +188,7 @@ layout: false
 
 * How do you get to  this
 
-&lt;img src=&#34;data/sin.png&#34; height=&#34;250&#34; /&gt;
+<img src="data/sin.png" height="250" />
 
 ---
 
@@ -187,7 +203,7 @@ import numpy as np
 
 * Load the data from file
 ```python
-data = np.loadtxt(&#39;filename&#39;)
+data = np.loadtxt('filename')
 ```
 --
 
@@ -239,20 +255,20 @@ plt.show()
 #### A more advanced example
 ```python
 fig, ax1 = plt.subplots()
-ax1.plot(orbital, dataset1, &#39;b-&#39;)
-ax1.set_xlabel(&#39;orbital&#39;)
+ax1.plot(orbital, dataset1, 'b-')
+ax1.set_xlabel('orbital')
 # Make the y-axis label and tick labels match the line color.
-ax1.set_ylabel(&#39;occupied&#39;, color=&#39;b&#39;)
+ax1.set_ylabel('occupied', color='b')
 for tl in ax1.get_yticklabels():
-    tl.set_color(&#39;b&#39;)
+    tl.set_color('b')
 ax2 = ax1.twinx()
-ax2.plot(orbital, dataset2, &#39;r-&#39;)
-ax2.set_ylabel(&#39;virtual&#39;, color=&#39;r&#39;)
+ax2.plot(orbital, dataset2, 'r-')
+ax2.set_ylabel('virtual', color='r')
 ax2.set_ylim(ax2.get_ylim()[::-1])
 for tl in ax2.get_yticklabels():
-    tl.set_color(&#39;r&#39;)
+    tl.set_color('r')
 ```
-&lt;img src=&#34;img/dualplot.png&#34; height=&#34;325&#34;/&gt;
+<img src="/plotting/img/dualplot.png" height="325"/>
 
 ---
 
@@ -266,9 +282,8 @@ for tl in ax2.get_yticklabels():
 --
 
 
-* Try some exercises at
+* Try some exercises at [scipy-lectures](http://scipy-lectures.github.io/intro/matplotlib/index.html#other-types-of-plots-examples-and-exercises)
 
-http://scipy-lectures.github.io/intro/matplotlib/matplotlib.html#other-types-of-plots-examples-and-exercises
       
 
     </textarea>
@@ -280,9 +295,10 @@ http://scipy-lectures.github.io/intro/matplotlib/matplotlib.html#other-types-of-
     <script src="/plotting/refreeze/js/high.js" type="text/javascript"></script>
     <script type="text/javascript">
       var slideshow = remark.create({
-          highlightStyle: 'sunburst',
+          highlightStyle: 'gmd',
           highlightLanguage: 'remark'
         }) ;
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
